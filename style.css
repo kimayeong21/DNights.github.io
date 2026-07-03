@@ -211,8 +211,22 @@ h3 {
 }
 
 .project-card p {
-  min-height: 58px;
+  margin-bottom: 14px;
   color: var(--muted);
+}
+
+.project-card ul {
+  display: grid;
+  gap: 7px;
+  min-height: 104px;
+  margin: 0 0 18px;
+  padding-left: 20px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.project-card li::marker {
+  color: var(--blue);
 }
 
 .project-card span {
