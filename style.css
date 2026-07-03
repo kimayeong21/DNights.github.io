@@ -208,6 +208,8 @@ h3 {
 
 .project-card {
   padding: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card p {
@@ -215,14 +217,43 @@ h3 {
   color: var(--muted);
 }
 
-.project-card ul {
+.detail-toggle {
+  align-self: flex-start;
+  min-height: 36px;
+  margin: 0 0 14px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.detail-toggle:hover {
+  border-color: var(--blue);
+  background: #eff6ff;
+}
+
+.project-detail {
   display: grid;
   gap: 7px;
-  min-height: 104px;
-  margin: 0 0 18px;
+  max-height: 0;
+  margin: 0;
   padding-left: 20px;
   color: #475569;
   font-size: 14px;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease, margin 0.25s ease, opacity 0.2s ease;
+}
+
+.project-card.is-open .project-detail {
+  max-height: 160px;
+  margin: 0 0 18px;
+  opacity: 1;
 }
 
 .project-card li::marker {
@@ -231,6 +262,7 @@ h3 {
 
 .project-card span {
   display: inline-block;
+  margin-top: auto;
   color: var(--blue);
   font-size: 14px;
   font-weight: 800;
