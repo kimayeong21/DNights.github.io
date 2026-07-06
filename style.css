@@ -262,21 +262,40 @@ h3 {
 
 .project-detail {
   display: grid;
-  gap: 7px;
+  gap: 12px;
   max-height: 0;
   margin: 0;
-  padding-left: 20px;
+  padding: 0;
   color: #475569;
   font-size: 14px;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.25s ease, margin 0.25s ease, opacity 0.2s ease;
+  transition: max-height 0.35s ease, margin 0.25s ease, opacity 0.2s ease;
 }
 
 .project-card.is-open .project-detail {
-  max-height: 160px;
-  margin: 0 0 18px;
+  max-height: 1200px;
+  margin: 4px 0 20px;
   opacity: 1;
+}
+
+.project-detail h4 {
+  margin: 10px 0 0;
+  color: var(--text);
+  font-size: 15px;
+}
+
+.project-detail p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.project-detail ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .project-card li::marker {
