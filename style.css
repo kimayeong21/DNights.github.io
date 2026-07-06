@@ -64,7 +64,7 @@ a {
 }
 
 .nav-links a:hover,
-.project-card a:hover,
+.project-link:hover,
 .contact-list a:hover {
   color: var(--blue);
 }
@@ -116,6 +116,10 @@ h2 {
 h3 {
   margin-bottom: 12px;
   font-size: 18px;
+}
+
+.project-card h3 {
+  margin-bottom: 14px;
 }
 
 .lead {
@@ -217,22 +221,41 @@ h3 {
   color: var(--muted);
 }
 
-.detail-toggle {
-  align-self: flex-start;
-  min-height: 36px;
-  margin: 0 0 14px;
-  padding: 0 13px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #f8fafc;
-  color: var(--blue);
+.project-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
   cursor: pointer;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.project-title:hover {
+  color: var(--blue);
+}
+
+.project-title::after {
+  content: "내용 보기";
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--blue);
+  font-size: 12px;
   font-weight: 800;
 }
 
-.detail-toggle:hover {
+.project-card.is-open .project-title::after {
+  content: "내용 접기";
   border-color: var(--blue);
   background: #eff6ff;
 }
@@ -263,9 +286,30 @@ h3 {
 .project-card span {
   display: inline-block;
   margin-top: auto;
+  margin-bottom: 12px;
   color: var(--blue);
   font-size: 14px;
   font-weight: 800;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.project-link:hover {
+  border-color: var(--blue);
+  background: #eff6ff;
 }
 
 .focus-table {
