@@ -80,7 +80,7 @@
         </div>
         <div class="project-grid">
           <article class="project-card" data-project="digital-legacy">
-            <h3><a class="project-title" href="./project.html?id=digital-legacy">Digital Legacy Management Service (AI 기반 추억 관리 서비스)</a></h3>
+            <h3><button class="project-title" type="button">Digital Legacy Management Service (AI 기반 추억 관리 서비스)</button></h3>
             <p>사진, 영상, 문서, SNS 기록처럼 흩어진 개인의 디지털 추억을 한 곳에서 저장하고 관리하는 AI 기반 추억 관리 웹 서비스입니다.</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
@@ -99,7 +99,7 @@
             <a class="project-link" href="https://github.com/kimayeong21/DigitalLegacy_ManagementService" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="smart-bus">
-            <h3><a class="project-title" href="./project.html?id=smart-bus">Smart Schedule Bus System (스마트 일정 및 버스 통합 관리 시스템)</a></h3>
+            <h3><button class="project-title" type="button">Smart Schedule Bus System (스마트 일정 및 버스 통합 관리 시스템)</button></h3>
             <p>개인 일정과 청주시 버스 정보를 연결해 이동 계획을 돕는 생활 편의 서비스</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
@@ -118,7 +118,7 @@
             <a class="project-link" href="https://github.com/kimayeong21/smart-schedule-bus-system" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="water-quality">
-            <h3><a class="project-title" href="./project.html?id=water-quality">Smart Water Quality Monitoring System (스마트 수질 모니터링 시스템)</a></h3>
+            <h3><button class="project-title" type="button">Smart Water Quality Monitoring System (스마트 수질 모니터링 시스템)</button></h3>
             <p>웹캠 영상 분석과 Arduino RGB LED를 활용한 수질 상태 모니터링 시스템</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
@@ -137,7 +137,7 @@
             <a class="project-link" href="https://github.com/kimayeong21/iot-water-monitoring-system" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="r2-robotech">
-            <h3><a class="project-title" href="./project.html?id=r2-robotech">R2 Robotech AI Projects (로보테크 AI 프로젝트 모음)</a></h3>
+            <h3><button class="project-title" type="button">R2 Robotech AI Projects (로보테크 AI 프로젝트 모음)</button></h3>
             <p>로보테크 AI 과정에서 진행한 Python, 데이터 분석, TCP 통신, 로봇 관제, Arduino 실습 프로젝트 모음</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
@@ -157,7 +157,7 @@
             <a class="project-link" href="https://github.com/kimayeong21/R2-cleaned" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="lidar">
-            <h3><a class="project-title" href="./project.html?id=lidar">LiDAR Mock Autonomous Driving System (LiDAR 기반 모의 자율주행 시스템)</a></h3>
+            <h3><button class="project-title" type="button">LiDAR Mock Autonomous Driving System (LiDAR 기반 모의 자율주행 시스템)</button></h3>
             <p>로보테크 AI 과정에서 진행한 ROS2 기반 LiDAR 모의 자율주행 및 데이터 저장 프로젝트</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
@@ -176,7 +176,7 @@
             <a class="project-link" href="https://github.com/kimayeong21/lidar_project" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="movie">
-            <h3><a class="project-title" href="./project.html?id=movie">Movie Recommendation System (영화 추천 및 관리 시스템)</a></h3>
+            <h3><button class="project-title" type="button">Movie Recommendation System (영화 추천 및 관리 시스템)</button></h3>
             <p>회원, 검색, 평점, 관리자 기능을 포함한 C 언어 기반 영화 관리 프로그램</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
@@ -195,7 +195,7 @@
             <a class="project-link" href="https://github.com/kimayeong21/movie-system-c" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="grade">
-            <h3><a class="project-title" href="./project.html?id=grade">Student Grade Management System (개인 성적 관리 시스템)</a></h3>
+            <h3><button class="project-title" type="button">Student Grade Management System (개인 성적 관리 시스템)</button></h3>
             <p>성적 데이터를 학기별로 확인하고 검색·수정·삭제하는 Java Swing GUI 프로그램</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
@@ -213,6 +213,17 @@
             <span>Java · Swing · TXT File I/O</span>
             <a class="project-link" href="https://github.com/kimayeong21/student-grade-management-system" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
+        </div>
+        <div class="project-viewer" id="project-viewer" hidden>
+          <div class="viewer-shell">
+            <button class="viewer-close" type="button" aria-label="상세 내용 닫기">×</button>
+            <p class="eyebrow">Project Detail</p>
+            <h3 id="viewer-title"></h3>
+            <p class="viewer-summary" id="viewer-summary"></p>
+            <div class="viewer-stack" id="viewer-stack"></div>
+            <div class="viewer-content" id="viewer-content"></div>
+            <a class="project-link viewer-link" id="viewer-link" href="#" target="_blank" rel="noreferrer">GitHub Repository</a>
+          </div>
         </div>
       </section>
 
@@ -317,5 +328,6 @@
     <footer class="footer">
       <span>Building AI, IoT and Web Services</span>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

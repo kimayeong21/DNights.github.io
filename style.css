@@ -280,7 +280,7 @@ h3 {
 }
 
 .project-title::after {
-  content: "상세 페이지";
+  content: "내용 보기";
   position: absolute;
   top: 34px;
   right: 22px;
@@ -326,66 +326,82 @@ h3 {
   background: #eff6ff;
 }
 
-.project-page {
-  max-width: 920px;
+.project-viewer {
+  margin-top: 22px;
 }
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  min-height: 38px;
-  margin-bottom: 26px;
-  padding: 0 13px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
-  color: var(--text);
-  font-weight: 800;
-}
-
-.back-link:hover {
-  border-color: var(--blue);
-  color: var(--blue);
-}
-
-.detail-summary {
-  max-width: 820px;
-  color: #334155;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-.detail-stack {
-  display: inline-block;
-  margin: 10px 0 28px;
-  color: var(--blue);
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.detail-content {
+.viewer-shell {
+  position: relative;
   display: grid;
   gap: 16px;
-  padding: 26px;
+  padding: 28px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
   box-shadow: var(--shadow);
 }
 
-.detail-content h4 {
+.viewer-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.viewer-close:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.viewer-shell h3 {
+  max-width: calc(100% - 54px);
+  margin: 0;
+  color: var(--text);
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.viewer-summary {
+  max-width: 920px;
+  margin: 0;
+  color: #334155;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.viewer-stack {
+  color: var(--blue);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.viewer-content {
+  display: grid;
+  gap: 14px;
+}
+
+.viewer-content h4 {
   margin: 6px 0 0;
   color: var(--text);
   font-size: 18px;
 }
 
-.detail-content p {
+.viewer-content p {
   margin: 0;
   color: #475569;
   font-size: 16px;
 }
 
-.detail-content ul {
+.viewer-content ul {
   display: grid;
   gap: 8px;
   margin: 0;
@@ -393,12 +409,12 @@ h3 {
   color: #475569;
 }
 
-.detail-content li::marker {
+.viewer-content li::marker {
   color: var(--blue);
 }
 
-.detail-repo {
-  margin-top: 26px;
+.viewer-link {
+  margin-top: 4px;
 }
 
 .focus-table {
