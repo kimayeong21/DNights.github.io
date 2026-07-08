@@ -327,13 +327,26 @@ h3 {
 }
 
 .project-viewer {
-  margin-top: 22px;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  background: rgba(15, 23, 42, 0.48);
+}
+
+.project-viewer[hidden] {
+  display: none;
 }
 
 .viewer-shell {
   position: relative;
   display: grid;
   gap: 16px;
+  width: min(920px, 100%);
+  max-height: min(820px, calc(100vh - 56px));
+  overflow-y: auto;
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -414,7 +427,52 @@ h3 {
 }
 
 .viewer-link {
-  margin-top: 4px;
+  margin-top: 0;
+}
+
+.viewer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.viewer-back,
+.viewer-cancel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.viewer-back {
+  background: var(--blue);
+  border-color: var(--blue);
+  color: #fff;
+}
+
+.viewer-back:hover,
+.viewer-cancel:hover {
+  border-color: var(--blue);
+}
+
+.viewer-cancel:hover {
+  background: #eff6ff;
+  color: var(--blue);
+}
+
+body.viewer-open {
+  overflow: hidden;
 }
 
 .focus-table {

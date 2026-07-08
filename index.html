@@ -214,15 +214,19 @@
             <a class="project-link" href="https://github.com/kimayeong21/student-grade-management-system" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
         </div>
-        <div class="project-viewer" id="project-viewer" hidden>
-          <div class="viewer-shell">
+        <div class="project-viewer" id="project-viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
+          <div class="viewer-shell" role="document">
             <button class="viewer-close" type="button" aria-label="상세 내용 닫기">×</button>
             <p class="eyebrow">Project Detail</p>
             <h3 id="viewer-title"></h3>
             <p class="viewer-summary" id="viewer-summary"></p>
             <div class="viewer-stack" id="viewer-stack"></div>
             <div class="viewer-content" id="viewer-content"></div>
-            <a class="project-link viewer-link" id="viewer-link" href="#" target="_blank" rel="noreferrer">GitHub Repository</a>
+            <div class="viewer-actions">
+              <button class="viewer-back" type="button">뒤로 가기</button>
+              <button class="viewer-cancel" type="button">취소</button>
+              <a class="project-link viewer-link" id="viewer-link" href="#" target="_blank" rel="noreferrer">GitHub Repository</a>
+            </div>
           </div>
         </div>
       </section>
