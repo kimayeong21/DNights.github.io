@@ -137,6 +137,37 @@ h3 {
   font-size: 17px;
 }
 
+.hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 820px;
+  margin-top: 26px;
+}
+
+.hero-highlights div {
+  min-height: 122px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.hero-highlights strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.hero-highlights span {
+  display: block;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -433,7 +464,8 @@ h3 {
 
   .hero,
   .project-grid,
-  .stack-grid {
+  .stack-grid,
+  .hero-highlights {
     grid-template-columns: 1fr;
   }
 
