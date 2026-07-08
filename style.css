@@ -240,7 +240,7 @@ h3 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: 1fr;
+  grid-auto-rows: minmax(292px, auto);
   align-items: stretch;
   gap: 16px;
 }
@@ -293,50 +293,88 @@ h3 {
 }
 
 .project-card.is-open .project-title::after {
-  content: "내용 접기";
+  content: "선택됨";
   border-color: var(--blue);
   background: #eff6ff;
 }
 
 .project-detail {
+  display: none;
+}
+
+.project-reader {
+  margin-top: 18px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.project-reader[hidden] {
+  display: none;
+}
+
+.reader-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.reader-header h3 {
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.reader-close {
+  min-height: 36px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafc;
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 800;
+}
+
+.reader-close:hover {
+  border-color: var(--blue);
+  background: #eff6ff;
+  color: var(--blue);
+}
+
+.reader-body {
   display: grid;
   gap: 12px;
-  max-height: 0;
-  margin: 0;
-  padding: 0;
   color: #475569;
-  font-size: 14px;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, margin 0.25s ease, opacity 0.2s ease;
-}
-
-.project-card.is-open .project-detail {
-  max-height: 1200px;
-  margin: 4px 0 20px;
-  opacity: 1;
-}
-
-.project-detail h4 {
-  margin: 10px 0 0;
-  color: var(--text);
   font-size: 15px;
 }
 
-.project-detail p {
-  margin: 0;
-  color: #475569;
-  font-size: 14px;
+.reader-body h4 {
+  margin: 10px 0 0;
+  color: var(--text);
+  font-size: 16px;
 }
 
-.project-detail ul {
+.reader-body p {
+  margin: 0;
+  color: #475569;
+  font-size: 15px;
+}
+
+.reader-body ul {
   display: grid;
   gap: 7px;
   margin: 0;
   padding-left: 20px;
 }
 
-.project-card li::marker {
+.reader-body li::marker {
   color: var(--blue);
 }
 
@@ -368,6 +406,10 @@ h3 {
 .project-link:hover {
   border-color: var(--blue);
   background: #eff6ff;
+}
+
+.reader-link {
+  margin-top: 20px;
 }
 
 .focus-table {
