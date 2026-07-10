@@ -490,19 +490,32 @@ body.viewer-open {
 }
 
 .focus-row span {
-  padding: 16px;
+  padding: 18px 16px;
   border-left: 1px solid var(--line);
+  color: #334155;
+  line-height: 1.75;
 }
 
 .focus-row span:first-child {
   border-left: 0;
+  color: var(--text);
   font-weight: 800;
+}
+
+.focus-row span:last-child {
+  color: #0f172a;
+  font-weight: 600;
 }
 
 .focus-head {
   background: #eff6ff;
   color: #1e3a8a;
   font-weight: 800;
+}
+
+.focus-head span {
+  color: #1e3a8a;
+  line-height: 1.4;
 }
 
 .stack-grid {
