@@ -95,7 +95,7 @@
               <h4>데이터와 확장 구조</h4>
               <p>MySQL을 기준으로 `users`, `sessions`, `categories`, `memories`, `connections` 테이블을 구성했고, memories 테이블 안에 AI 요약, 감정, 키워드, 장면, 분위기, 이미지 관찰, 사건 흐름, 분석 신뢰도 컬럼을 저장합니다. Cloudflare R2 기반 이미지·미디어 파일 저장 확장 구조와 FastAPI 기반 Python 분석 API 확장 구조도 함께 고려했습니다.</p>
             </div>
-            <span>TypeScript · Hono · Vite · MySQL · OpenAI Responses API · FastAPI · Cloudflare R2</span>
+            <span>TypeScript · Hono · Flask · Vite · MySQL · OpenAI Responses API · FastAPI · Cloudflare R2</span>
             <a class="project-link" href="https://github.com/kimayeong21/DigitalLegacy_ManagementService" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="smart-bus">
@@ -112,9 +112,9 @@
                 <li>Folium을 이용해 버스 노선 지도 HTML을 생성하는 기능도 포함되어 있습니다.</li>
               </ul>
               <h4>시스템 구성과 특징</h4>
-              <p>핵심 구현은 `창업프로젝트/app.py`에 있으며 Flask 라우팅, 세션, 템플릿 렌더링, SQLite 테이블 자동 생성, 공공데이터포털 버스 API 요청 로직이 함께 들어 있습니다. API 응답은 JSON을 우선 사용하고 실패 시 XML 파싱을 시도하도록 구성했습니다. 현재는 API 키 분리, 비밀번호 해시 처리, Java 클라이언트와 Flask 라우트 정합성 개선이 필요한 상태입니다.</p>
+              <p>핵심 구현은 `창업프로젝트/app.py`에 있으며 Flask 라우팅, 세션, 템플릿 렌더링, MySQL 데이터 관리, 공공데이터포털 버스 API 요청 로직이 함께 들어 있습니다. API 응답은 JSON을 우선 사용하고 실패 시 XML 파싱을 시도하도록 구성했습니다. 현재는 API 키 분리, 비밀번호 해시 처리, Java 클라이언트와 Flask 라우트 정합성 개선이 필요한 상태입니다.</p>
             </div>
-            <span>Python · Flask · SQLite · Requests · Public API · Folium · BeautifulSoup · Java Swing</span>
+            <span>Python · Flask · MySQL · Requests · Public API · Folium · BeautifulSoup · Java Swing</span>
             <a class="project-link" href="https://github.com/kimayeong21/smart-schedule-bus-system" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="water-quality">
@@ -272,10 +272,11 @@
         </div>
         <div class="stack-grid">
           <div class="stack-box">
-            <h3>Python</h3>
+            <h3>Python / Backend</h3>
             <div class="badges">
               <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
               <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+              <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
               <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
               <img src="https://img.shields.io/badge/Requests-2F80ED?style=for-the-badge" alt="Requests">
               <img src="https://img.shields.io/badge/Folium-77B829?style=for-the-badge" alt="Folium">
