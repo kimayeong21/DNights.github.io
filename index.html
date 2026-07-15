@@ -149,11 +149,12 @@
                 <li>TCP 소켓 기반 마피아 게임: 서버/클라이언트 구조, 다중 접속, 역할 배정, 낮/밤 페이즈, 투표와 처형 흐름을 구현했습니다.</li>
                 <li>로봇 경로 탐색 관제 GUI: TurtleBot3 제어, Flask REST API, MySQL, PyQt5 관제 화면을 연결했습니다.</li>
                 <li>자율주행자동차 보조안전모듈: 초음파, 온습도, 조도, 소음 센서 데이터를 UDP/HTTP로 PC GUI에 전달하고 LCD, LED, 부저로 위험 상황을 표시했습니다.</li>
+                <li>군집 협업 자율 피킹·운반 로봇 PACK: 리더 로봇의 자율주행, 로봇팔 피킹, F1/F2 팔로워 추종, A* 경로 이동, 웹 대시보드 관제를 통합했습니다.</li>
               </ul>
               <h4>로봇 프로젝트 확장</h4>
-              <p>TBPJ는 PMS7003과 ESP01에서 수집한 미세먼지 데이터를 MQTT로 전달하고, ROS2 노드가 오염도를 판단해 TurtleBot3 자율주행과 Spring Boot 웹 대시보드로 연결하는 프로젝트입니다. PACK은 구현 중인 군집 협업 피킹·운반 로봇으로, TurtleBot3 리더 로봇의 로봇팔 자동 피킹, ArUco 마커 인식, OpenCV solvePnP 위치 추정, MQTT·USB Serial 게이트웨이, F1/F2 추종 차량 FSM을 통합하는 방향으로 구성했습니다.</p>
+              <p>TBPJ는 PMS7003과 ESP01에서 수집한 미세먼지 데이터를 MQTT로 전달하고, ROS2 노드가 오염도를 판단해 TurtleBot3 자율주행과 Spring Boot 웹 대시보드로 연결하는 프로젝트입니다. PACK은 완성된 최종 프로젝트로, TurtleBot3 Waffle Pi 리더가 자율주행으로 적재 위치까지 이동하고 eye-in-hand 카메라와 6축 로봇팔로 물체를 피킹한 뒤 F1/F2 팔로워가 추종·운반하는 다중 로봇 협업 시스템입니다. ArUco 마커와 OpenCV solvePnP 기반 위치 추정, 엔코더 오도메트리 융합, A* 경로 계획, Pure Pursuit 주행, MQTT·USB Serial 게이트웨이, Flask·rosbridge 대시보드까지 하나의 미션 시나리오로 통합했습니다.</p>
             </div>
-            <span>Python · PyQt5 · pandas · TCP · ROS/ROS2 · TurtleBot3 · Arduino · MQTT · Spring Boot</span>
+            <span>Python · PyQt5 · pandas · TCP · ROS/ROS2 · TurtleBot3 · Arduino · MQTT · Spring Boot · OpenCV · ArUco · Flask</span>
             <a class="project-link" href="https://github.com/kimayeong21/R2-cleaned" target="_blank" rel="noreferrer">GitHub Repository</a>
           </article>
           <article class="project-card" data-project="lidar">
@@ -250,7 +251,7 @@
           <div class="focus-row">
             <span>IoT / Embedded</span>
             <span>Arduino, 카메라, 통신 모듈, 센서 데이터를 활용해 주변 상태를 감지하고 결과를 LED, LCD, 로봇 동작 같은 출력으로 연결합니다. 단순한 센서 읽기에서 끝내지 않고 실시간 모니터링, 상태 분류, 장치 제어까지 이어지는 구조를 구현합니다.</span>
-            <span>스마트 수질 모니터링, Arduino 센서 실습, 로봇 안전 모듈, TurtleBot3 연동 프로젝트</span>
+            <span>스마트 수질 모니터링, Arduino 센서 실습, 로봇 안전 모듈, PACK 군집 협업 로봇</span>
           </div>
           <div class="focus-row">
             <span>Web Service</span>
