@@ -80,23 +80,26 @@
         </div>
         <div class="project-grid">
           <article class="project-card" data-project="digital-legacy">
-            <h3><button class="project-title" type="button">Digital Legacy Management Service (AI 기반 추억 관리 서비스)</button></h3>
-            <p>사진, 영상, 문서, SNS 기록처럼 흩어진 개인의 디지털 추억을 한 곳에서 저장하고 관리하는 AI 기반 추억 관리 웹 서비스입니다.</p>
+            <h3><button class="project-title" type="button">MemoryLink — AI 기반 디지털 추억 관리 서비스</button></h3>
+            <p>사진과 기록을 모아 감정과 시간으로 다시 만나는 개인 아카이브입니다. 웹 화면과 Android 앱 프로젝트를 구현하고, 타임라인·추억 다시보기·백업 기능을 확장했습니다.</p>
             <div class="project-detail">
               <h4>프로젝트 개요</h4>
-              <p>디지털 자료가 많아질수록 중요한 추억을 다시 찾기 어려워지는 문제를 해결하기 위해 만든 서비스입니다. 사용자는 개인 계정으로 로그인해 제목, 설명, 내용, 날짜, 카테고리, 중요도, 이미지 또는 미디어 URL을 입력하고, 저장된 기록을 목록·검색·대시보드·타임라인·상세 화면에서 다시 확인할 수 있습니다.</p>
+              <p>사진, 영상, 문서, SNS 기록을 한곳에 정리하는 졸업작품입니다. 제목, 설명, 날짜, 카테고리, 중요도, 태그를 입력하고 대시보드·갤러리·타임라인에서 기록을 탐색할 수 있도록 구성했습니다. 따뜻한 색감의 화면과 모바일 하단 메뉴로 작은 화면에서도 주요 기능에 접근할 수 있습니다.</p>
               <h4>주요 구현 내용</h4>
               <ul>
-                <li>회원가입, 로그인, 로그아웃, 세션 기반 사용자 인증 흐름을 구성했습니다.</li>
-                <li>추억 추가, 조회, 수정, 삭제 기능과 카테고리 필터, 검색, 최근 기록, 타임라인 조회 기능을 구현했습니다.</li>
-                <li>AI가 제목, 설명, 이미지 정보를 바탕으로 요약, 감정, 분위기, 장면 유형, 핵심 키워드, 사건 흐름, 추억의 의미를 분석하도록 구성했습니다.</li>
-                <li>OpenAI API 호출이 실패해도 서비스가 멈추지 않도록 로컬 fallback 분석 흐름을 두었습니다.</li>
+                <li>추억 추가·수정·삭제, 이미지 붙여넣기와 드래그 앤 드롭, 기록 복제를 구현했습니다.</li>
+                <li>사용자 태그 검색, 카테고리·감정 필터, 정렬, 즐겨찾기, 여러 기록 선택 관리 기능을 추가했습니다.</li>
+                <li>타임라인과 무작위 추억 다시보기를 통해 지나간 기록을 다시 발견할 수 있습니다. 회상 알림은 사이트 방문 중 설정한 주기에 맞춰 안내합니다.</li>
+                <li>JSON 내보내기와 백업 복원을 지원하고, 브라우저 저장 방식으로도 주요 기록 관리 기능을 사용할 수 있습니다.</li>
+                <li>Hono·MySQL 인증 및 기록 API, OpenAI 분석 연동 코드와 로컬 예시 분석을 구성하고 Capacitor 기반 Android 프로젝트를 추가했습니다.</li>
               </ul>
               <h4>데이터와 확장 구조</h4>
-              <p>MySQL을 기준으로 `users`, `sessions`, `categories`, `memories`, `connections` 테이블을 구성했고, memories 테이블 안에 AI 요약, 감정, 키워드, 장면, 분위기, 이미지 관찰, 사건 흐름, 분석 신뢰도 컬럼을 저장합니다. Cloudflare R2 기반 이미지·미디어 파일 저장 확장 구조와 FastAPI 기반 Python 분석 API 확장 구조도 함께 고려했습니다.</p>
+              <p>TypeScript·Hono·Vite 웹 프로젝트에 MySQL 데이터 구조, Python FastAPI 분석 API와 Capacitor Android 프로젝트를 함께 구성했습니다. 공개 체험판은 브라우저 저장과 예시 분석을 사용하며, 서버 계정 인증·기기 간 동기화·실제 OpenAI 분석은 제공하지 않습니다.</p>
+              <p><a class="button primary" href="./memorylink/">MemoryLink 바로 체험하기 →</a></p>
             </div>
-            <span>TypeScript · Hono · Flask · Vite · MySQL · OpenAI Responses API · FastAPI · Cloudflare R2</span>
+            <span>TypeScript · Hono · Vite · MySQL · OpenAI · FastAPI · Capacitor · Android</span>
             <a class="project-link" href="https://github.com/kimayeong21/DigitalLegacy_ManagementService" target="_blank" rel="noreferrer">GitHub Repository</a>
+            <a class="button primary memorylink-demo-link" href="./memorylink/">MemoryLink 체험하기 →</a>
           </article>
           <article class="project-card" data-project="smart-bus">
             <h3><button class="project-title" type="button">Smart Schedule Bus System (스마트 일정 및 버스 통합 관리 시스템)</button></h3>

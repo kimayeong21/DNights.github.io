@@ -253,6 +253,11 @@ h3 {
   min-height: 292px;
 }
 
+.memorylink-demo-link {
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
 .project-card p {
   min-height: 58px;
   margin-bottom: 14px;
